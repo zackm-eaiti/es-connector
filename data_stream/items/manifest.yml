@@ -1,0 +1,12 @@
+title: "Items"
+type: logs
+dataset: connector.items
+elasticsearch:
+  index_template:
+    mappings:
+      dynamic: true
+streams:
+  - input: httpjson
+    title: "Fetch Items Stream"
+    description: "Fetches item data from the external API."
+    template_path: stream.yml.hbs

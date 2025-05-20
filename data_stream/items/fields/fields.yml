@@ -1,0 +1,17 @@
+
+- name: id
+  type: keyword
+  description: Unique ID of the item.
+
+- name: name
+  type: keyword
+  description: Name of the item.
+
+- name: category
+  type: keyword
+  description: Category of the item.
+
+# Optional but standard ECS field
+- name: "@timestamp"
+  type: date
+  description: "Event timestamp."

@@ -1,0 +1,34 @@
+# This defines the input type for Elastic Agent.
+# We're using httpjson because we're polling a REST API that returns JSON.
+input: httpjson
+
+# Metadata about the service we're integrating with.
+# Helps Elastic categorize the data source.
+service:
+  name: "item-connector"  # Friendly name for this external service.
+  type: "API"          # Type of service (API, database, storage, custom, etc.)
+
+# Configuration for the HTTP request we'll send to the API.
+request:
+  method: GET                           # HTTP method to use.
+  url: "http://localhost:8000/items"    # API endpoint to call. This returns a list of items.
+
+
+# Defines how often the request should be made.
+# Using cron syntax, "@every 24h" means once every 24 hours.
+schedule: "@every 1m"
+
+# How to handle the API's response.
+response:
+  decode_as: json    # Parse the HTTP response as JSON.
+  
+  # The API returns a JSON array of items.
+  # This tells Elastic to treat each item in the array as a separate event.
+  split:
+    target: ""       # Empty string means "split at the root level of the response".
+    type: object     # Each split item is a JSON object (not string, not array).
+
+# Defines the data stream where events will be ingested.
+data_stream:
+  dataset: connector.items   # Dataset name for organization (affects index naming).
+  type: logs                 # Type of data stream: logs, metrics, traces, etc.

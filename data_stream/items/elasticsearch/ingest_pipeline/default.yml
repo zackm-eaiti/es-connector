@@ -1,0 +1,18 @@
+---
+description: "Default pipeline for item-connector integration."
+processors:
+  - set:
+      field: '@timestamp'
+      value: '{{_ingest.timestamp}}'
+      if: "ctx['@timestamp'] == null"
+
+  - remove:
+      field:
+        - 'null'
+        - ''
+      ignore_missing: true
+
+on_failure:
+  - set:
+      field: 'error.message'
+      value: "{{ _ingest.on_failure_message }}"

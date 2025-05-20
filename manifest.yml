@@ -1,0 +1,22 @@
+format_version: 3.0.0
+name: connector
+title: "Item Connector"
+version: 0.1.0
+description: "Fetches items from an external API and ingests into Elasticsearch."
+type: integration
+owner:
+  github: zackm
+  type: community
+categories:
+  - custom
+policy_templates:
+  - name: item-connector
+    title: "Item Connector"
+    description: "Collect items from an external API."
+    data_streams:
+      - items
+    icons:
+      - src: /img/sample-logo.svg
+        title: "Sample Logo"
+        size: 32x32
+        type: image/svg+xml
