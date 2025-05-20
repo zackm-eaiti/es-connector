@@ -1,11 +1,9 @@
 - name: data_stream.type
   type: constant_keyword
-  value: logs # or metrics or traces, depending on what you're building
-
+  description: Data stream type.
 - name: data_stream.dataset
   type: constant_keyword
-  value: your_dataset_name
-
+  description: Data stream dataset.
 - name: data_stream.namespace
   type: constant_keyword
-  value: default
+  description: Data stream namespace.
