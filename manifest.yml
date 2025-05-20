@@ -7,16 +7,17 @@ type: integration
 owner:
   github: zackm
   type: community
-categories:
-  - custom
+categories: ["custom", "security"]
+
+conditions:
+  kibana:
+    version: "^8.0.0"
+
 policy_templates:
-  - name: item-connector
-    title: "Item Connector"
-    description: "Collect items from an external API."
-    data_streams:
-      - items
-    icons:
-      - src: /img/sample-logo.svg
-        title: "Sample Logo"
-        size: 32x32
-        type: image/svg+xml
+  - name: connector
+    title: Connector
+    description: Fetches item data from an external API and ingests it into Elastic.
+    inputs:
+      - type: httpjson
+        title: "Fetch Items"
+        description: "Fetches item data from the /items endpoint on your API."

@@ -1,12 +1,26 @@
-title: "Items"
 type: logs
-dataset: connector.items
-elasticsearch:
-  index_template:
-    mappings:
-      dynamic: true
+title: Items
 streams:
   - input: httpjson
-    title: "Fetch Items Stream"
-    description: "Fetches item data from the external API."
-    template_path: stream.yml.hbs
+    vars:
+      - name: url
+        type: text
+        title: API URL
+        multi: false
+        required: true
+        show_user: true
+        default: http://host.docker.internal:8000/items
+        description: The full URL of the API endpoint to fetch item data from.
+
+      - name: interval_period
+        type: text
+        title: Fetch Interval
+        multi: false
+        required: true
+        show_user: true
+        default: 10s
+        description: Interval to poll the API (e.g. @every 10s)
+
+    template_path: httpjson.yml.hbs
+    title: Fetch Items from API
+    description: Ingests item records from your external API.

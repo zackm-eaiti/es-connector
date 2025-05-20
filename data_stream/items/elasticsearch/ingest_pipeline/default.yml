@@ -1,18 +1,21 @@
 ---
-description: "Default pipeline for item-connector integration."
+description: Ingest pipeline for items
 processors:
+  - rename:
+      field: item.id
+      target_field: id
+  - rename:
+      field: item.name
+      target_field: name
+  - rename:
+      field: item.category
+      target_field: category
   - set:
-      field: '@timestamp'
-      value: '{{_ingest.timestamp}}'
-      if: "ctx['@timestamp'] == null"
-
-  - remove:
-      field:
-        - 'null'
-        - ''
-      ignore_missing: true
-
-on_failure:
+      field: event.dataset
+      value: connector.items
   - set:
-      field: 'error.message'
-      value: "{{ _ingest.on_failure_message }}"
+      field: "@timestamp"
+      value: "{{_ingest.timestamp}}"
+  - set:
+      field: ecs.version
+      value: "8.0.0"

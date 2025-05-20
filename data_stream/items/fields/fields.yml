@@ -1,6 +1,5 @@
-
 - name: id
-  type: keyword
+  type: float
   description: Unique ID of the item.
 
 - name: name

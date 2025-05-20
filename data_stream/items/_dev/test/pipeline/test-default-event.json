@@ -1,8 +1,14 @@
 {
-  "events": [
-    {
-      "@timestamp": "2024-01-01T00:00:00Z",
-      "message": "{\"foo\": \"bar\", \"status\": 200, \"path\": \"/health\"}"
-    }
-  ]
+	"events": [
+		{
+			"id": 1,
+			"name": "Item 1",
+			"category": "mock-category"
+		},
+		{
+			"id": 2,
+			"name": "Item 2",
+			"category": "mock-category"
+		}
+	]
 }
