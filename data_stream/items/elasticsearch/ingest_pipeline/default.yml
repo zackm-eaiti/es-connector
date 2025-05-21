@@ -1,19 +1,47 @@
 ---
 description: Ingest pipeline for items
 processors:
+  - json:
+      field: message
+      target_field: message_decoded
+
+  - rename:
+      field: message_decoded.id
+      target_field: item.id
+
+  - rename:
+      field: message_decoded.name
+      target_field: item.name
+
+  - rename:
+      field: message_decoded.category
+      target_field: item.category
+
+  - remove:
+      field: message_decoded
+
+  - remove:
+      field: message
+
+  - script:
+      lang: painless
+      description: "Dump full document for debug"
+      source: "ctx.debug = ctx.toString()"
+
   - set:
       field: event.dataset
       value: connector.items
   - set:
       field: "@timestamp"
-      value: "{{_ingest.timestamp}}"
+      value: "{{ _ingest.timestamp }}"
   - set:
       field: ecs.version
       value: "8.0.0"
-  - set:
-      field: message
-      value: "nothing important"
   - set: 
       field: input.type
       value: httpjson
-
+      
+on_failure:
+  - set:
+      field: error.message
+      value: "{{ _ingest.on_failure_message }}"

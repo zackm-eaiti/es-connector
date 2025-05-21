@@ -1,44 +1,46 @@
 {
-    "@timestamp": "2025-05-21T15:21:49.018890135Z",
+    "@timestamp": "2025-05-21T19:29:41.794586714Z",
     "agent": {
-        "ephemeral_id": "9f2eadfa-ef38-4df2-b4e3-90738310f884",
-        "id": "edcb48d0-1568-4c6c-9b7a-56fd69eef5da",
-        "name": "elastic-agent-21857",
+        "ephemeral_id": "0a8d6bee-8661-4600-bc67-d7a70585a816",
+        "id": "b687a4c0-dcd5-4abf-af8b-d41958e33552",
+        "name": "elastic-agent-34420",
         "type": "filebeat",
         "version": "8.17.4"
     },
+    "category": "person",
     "data_stream": {
         "dataset": "connector.items",
-        "namespace": "67376",
+        "namespace": "36295",
         "type": "logs"
     },
+    "debug": "{agent={name=elastic-agent-34420, id=b687a4c0-dcd5-4abf-af8b-d41958e33552, type=filebeat, ephemeral_id=0a8d6bee-8661-4600-bc67-d7a70585a816, version=8.17.4}, elastic_agent={id=b687a4c0-dcd5-4abf-af8b-d41958e33552, version=8.17.4, snapshot=false}, message={\"category\":\"person\",\"id\":0,\"name\":\"gary\"}, input={type=httpjson}, @timestamp=2025-05-21T19:29:38.799Z, ecs={version=8.0.0}, data_stream={namespace=36295, type=logs, dataset=connector.items}, message_decoded={}, host={hostname=elastic-agent-34420, os={kernel=6.10.14-linuxkit, name=Wolfi, family=, type=linux, version=20230201, platform=wolfi}, containerized=false, ip=[172.19.0.2, 172.18.0.4], name=elastic-agent-34420, mac=[42-85-10-58-55-AF, 4E-96-28-68-BF-12], architecture=aarch64}, name=gary, id=0, event={created=2025-05-21T19:29:38.799Z, dataset=connector.items}, category=person, _version_type=internal, _index=logs-connector.items-36295, _id=null, _version=-4}",
     "ecs": {
         "version": "8.0.0"
     },
     "elastic_agent": {
-        "id": "edcb48d0-1568-4c6c-9b7a-56fd69eef5da",
+        "id": "b687a4c0-dcd5-4abf-af8b-d41958e33552",
         "snapshot": false,
         "version": "8.17.4"
     },
     "event": {
         "agent_id_status": "verified",
-        "created": "2025-05-21T15:21:46.016Z",
+        "created": "2025-05-21T19:29:38.799Z",
         "dataset": "connector.items",
-        "ingested": "2025-05-21T15:21:49Z"
+        "ingested": "2025-05-21T19:29:41Z"
     },
     "host": {
         "architecture": "aarch64",
         "containerized": false,
-        "hostname": "elastic-agent-21857",
+        "hostname": "elastic-agent-34420",
         "ip": [
             "172.19.0.2",
             "172.18.0.4"
         ],
         "mac": [
-            "22-62-1E-52-88-F6",
-            "76-16-B2-6C-EA-C4"
+            "42-85-10-58-55-AF",
+            "4E-96-28-68-BF-12"
         ],
-        "name": "elastic-agent-21857",
+        "name": "elastic-agent-34420",
         "os": {
             "family": "",
             "kernel": "6.10.14-linuxkit",
@@ -48,8 +50,11 @@
             "version": "20230201"
         }
     },
+    "id": 0,
     "input": {
         "type": "httpjson"
     },
-    "message": "nothing important"
+    "message": "{\"category\":\"person\",\"id\":0,\"name\":\"gary\"}",
+    "message_decoded": {},
+    "name": "gary"
 }

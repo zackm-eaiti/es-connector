@@ -1,14 +1,22 @@
-- name: id
-  type: long
-  description: Unique ID of the item.
+- name: item
+  type: group
+  description: Item details
+  fields:
+    - name: id
+      type: long
+      description: Unique ID of the item.
 
-- name: name
-  type: keyword
-  description: Name of the item.
+    - name: name
+      type: keyword
+      description: Name of the item.
 
-- name: category
-  type: keyword
-  description: Category of the item.
+    - name: category
+      type: keyword
+      description: Category of the item.
+      
+- name: debug
+  type: text
+  description: debug
 
 - name: data_stream.type
   type: constant_keyword

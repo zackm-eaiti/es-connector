@@ -1,0 +1,17 @@
+connector
+├── changelog.yml
+├── data_stream
+│   └── items
+│       ├── agent
+│       │   └── stream
+│       │       └── httpjson.yml.hbs
+│       ├── elasticsearch
+│       │   └── ingest_pipeline
+│       │       └── default.yml
+│       ├── fields
+│       │   ├── base-fields.yml
+│       │   └── fields.yml
+│       └── manifest.yml
+├── docs
+│   └── README.md
+└── manifest.yml
