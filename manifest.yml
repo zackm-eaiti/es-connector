@@ -9,10 +9,6 @@ owner:
   type: community
 categories: ["custom", "security"]
 
-conditions:
-  kibana:
-    version: "^8.0.0"
-
 policy_templates:
   - name: connector
     title: Connector

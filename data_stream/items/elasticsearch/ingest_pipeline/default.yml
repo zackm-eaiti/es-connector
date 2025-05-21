@@ -1,15 +1,6 @@
 ---
 description: Ingest pipeline for items
 processors:
-  - rename:
-      field: item.id
-      target_field: id
-  - rename:
-      field: item.name
-      target_field: name
-  - rename:
-      field: item.category
-      target_field: category
   - set:
       field: event.dataset
       value: connector.items
@@ -19,3 +10,10 @@ processors:
   - set:
       field: ecs.version
       value: "8.0.0"
+  - set:
+      field: message
+      value: "nothing important"
+  - set: 
+      field: input.type
+      value: httpjson
+

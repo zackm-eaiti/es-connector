@@ -1,5 +1,5 @@
 - name: id
-  type: float
+  type: long
   description: Unique ID of the item.
 
 - name: name
@@ -10,7 +10,30 @@
   type: keyword
   description: Category of the item.
 
-# Optional but standard ECS field
+- name: data_stream.type
+  type: constant_keyword
+  description: Data stream type.
+
+- name: data_stream.dataset
+  type: constant_keyword
+  description: Data stream dataset.
+
+- name: data_stream.namespace
+  type: constant_keyword
+  description: Data stream namespace.
+
+- name: ecs.version
+  type: keyword
+  description: ECS version the event conforms to.
+
+- name: message
+  type: text
+  description: Original message of the event.
+
 - name: "@timestamp"
   type: date
-  description: "Event timestamp."
+  description: Event timestamp.
+
+- name: input.type
+  type: keyword
+  description: The type of data we are ingesting

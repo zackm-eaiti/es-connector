@@ -1,21 +1,35 @@
 {
     "expected": [
         {
-            "@timestamp": "2025-05-20T19:03:48.993357840Z",
+            "@timestamp": "2025-05-21T15:15:19.786914552Z",
             "category": "mock-category",
+            "ecs": {
+                "version": "8.0.0"
+            },
             "event": {
                 "dataset": "connector.items"
             },
             "id": 1,
+            "input": {
+                "type": "httpjson"
+            },
+            "message": "nothing important",
             "name": "Item 1"
         },
         {
-            "@timestamp": "2025-05-20T19:03:48.993379090Z",
+            "@timestamp": "2025-05-21T15:15:19.786928177Z",
             "category": "mock-category",
+            "ecs": {
+                "version": "8.0.0"
+            },
             "event": {
                 "dataset": "connector.items"
             },
             "id": 2,
+            "input": {
+                "type": "httpjson"
+            },
+            "message": "nothing important",
             "name": "Item 2"
         }
     ]
