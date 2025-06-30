@@ -1,46 +1,45 @@
 {
-    "@timestamp": "2025-05-21T19:29:41.794586714Z",
+    "@timestamp": "2025-06-05T17:10:18.362785717Z",
     "agent": {
-        "ephemeral_id": "0a8d6bee-8661-4600-bc67-d7a70585a816",
-        "id": "b687a4c0-dcd5-4abf-af8b-d41958e33552",
-        "name": "elastic-agent-34420",
+        "ephemeral_id": "748facfc-cc0f-4c78-8262-42a3e9856f16",
+        "id": "553314e7-eda0-4c63-9ca8-4d917a91e372",
+        "name": "elastic-agent-18455",
         "type": "filebeat",
         "version": "8.17.4"
     },
-    "category": "person",
     "data_stream": {
         "dataset": "connector.items",
-        "namespace": "36295",
+        "namespace": "28283",
         "type": "logs"
     },
-    "debug": "{agent={name=elastic-agent-34420, id=b687a4c0-dcd5-4abf-af8b-d41958e33552, type=filebeat, ephemeral_id=0a8d6bee-8661-4600-bc67-d7a70585a816, version=8.17.4}, elastic_agent={id=b687a4c0-dcd5-4abf-af8b-d41958e33552, version=8.17.4, snapshot=false}, message={\"category\":\"person\",\"id\":0,\"name\":\"gary\"}, input={type=httpjson}, @timestamp=2025-05-21T19:29:38.799Z, ecs={version=8.0.0}, data_stream={namespace=36295, type=logs, dataset=connector.items}, message_decoded={}, host={hostname=elastic-agent-34420, os={kernel=6.10.14-linuxkit, name=Wolfi, family=, type=linux, version=20230201, platform=wolfi}, containerized=false, ip=[172.19.0.2, 172.18.0.4], name=elastic-agent-34420, mac=[42-85-10-58-55-AF, 4E-96-28-68-BF-12], architecture=aarch64}, name=gary, id=0, event={created=2025-05-21T19:29:38.799Z, dataset=connector.items}, category=person, _version_type=internal, _index=logs-connector.items-36295, _id=null, _version=-4}",
+    "debug": "{input={type=httpjson}, agent={name=elastic-agent-18455, id=553314e7-eda0-4c63-9ca8-4d917a91e372, ephemeral_id=748facfc-cc0f-4c78-8262-42a3e9856f16, type=filebeat, version=8.17.4}, item={expires_at=2025-06-05T17:15:15.347434Z, name=r, id=2, category=person}, @timestamp=2025-06-05T17:10:15.349Z, ecs={version=8.0.0}, data_stream={namespace=28283, type=logs, dataset=connector.items}, elastic_agent={id=553314e7-eda0-4c63-9ca8-4d917a91e372, version=8.17.4, snapshot=false}, host={hostname=elastic-agent-18455, os={kernel=6.10.14-linuxkit, name=Wolfi, family=, type=linux, version=20230201, platform=wolfi}, containerized=false, ip=[172.19.0.2, 172.18.0.4], name=elastic-agent-18455, mac=[02-AC-3C-AD-5A-50, 1E-5F-96-2B-E8-EC], architecture=aarch64}, event={created=2025-06-05T17:10:15.349Z, dataset=connector.items}, _version_type=internal, _index=logs-connector.items-28283, _id=null, _version=-4}",
     "ecs": {
         "version": "8.0.0"
     },
     "elastic_agent": {
-        "id": "b687a4c0-dcd5-4abf-af8b-d41958e33552",
+        "id": "553314e7-eda0-4c63-9ca8-4d917a91e372",
         "snapshot": false,
         "version": "8.17.4"
     },
     "event": {
         "agent_id_status": "verified",
-        "created": "2025-05-21T19:29:38.799Z",
+        "created": "2025-06-05T17:10:15.349Z",
         "dataset": "connector.items",
-        "ingested": "2025-05-21T19:29:41Z"
+        "ingested": "2025-06-05T17:10:18Z"
     },
     "host": {
         "architecture": "aarch64",
         "containerized": false,
-        "hostname": "elastic-agent-34420",
+        "hostname": "elastic-agent-18455",
         "ip": [
             "172.19.0.2",
             "172.18.0.4"
         ],
         "mac": [
-            "42-85-10-58-55-AF",
-            "4E-96-28-68-BF-12"
+            "02-AC-3C-AD-5A-50",
+            "1E-5F-96-2B-E8-EC"
         ],
-        "name": "elastic-agent-34420",
+        "name": "elastic-agent-18455",
         "os": {
             "family": "",
             "kernel": "6.10.14-linuxkit",
@@ -50,11 +49,13 @@
             "version": "20230201"
         }
     },
-    "id": 0,
     "input": {
         "type": "httpjson"
     },
-    "message": "{\"category\":\"person\",\"id\":0,\"name\":\"gary\"}",
-    "message_decoded": {},
-    "name": "gary"
+    "item": {
+        "category": "person",
+        "expires_at": "2025-06-05T17:15:15.347434Z",
+        "id": 2,
+        "name": "r"
+    }
 }

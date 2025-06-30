@@ -12,6 +12,15 @@ connector
 │       │   ├── base-fields.yml
 │       │   └── fields.yml
 │       └── manifest.yml
+├── elasticsearch
+│   └── transform
+│       └── latest_ioc
+│           ├── fields
+│           │   ├── base-fields.yml
+│           │   ├── fields.yml
+│           │   └── is-ioc-transform-source-false.yml
+│           ├── manifest.yml
+│           └── transform.yml
 ├── docs
 │   └── README.md
 └── manifest.yml

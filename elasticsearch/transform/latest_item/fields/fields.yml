@@ -1,0 +1,25 @@
+- name: item
+  type: group
+  description: Item details
+  fields:
+    - name: id
+      type: long
+      description: Unique ID of the item.
+
+    - name: name
+      type: keyword
+      description: Name of the item.
+
+    - name: category
+      type: keyword
+      description: Category of the item.
+
+    - name: expires_at
+      type: date 
+      description: Expiration time of item
+
+- name: message
+  type: text
+  description: Original message of the event.
+
+

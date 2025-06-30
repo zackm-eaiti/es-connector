@@ -17,16 +17,15 @@ processors:
       field: message_decoded.category
       target_field: item.category
 
+  - rename:
+      field: message_decoded.expires_at
+      target_field: item.expires_at
+
   - remove:
       field: message_decoded
 
   - remove:
       field: message
-
-  - script:
-      lang: painless
-      description: "Dump full document for debug"
-      source: "ctx.debug = ctx.toString()"
 
   - set:
       field: event.dataset

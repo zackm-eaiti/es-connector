@@ -1,7 +1,27 @@
 type: logs
 title: Items
+ilm_policy: logs-connector.items-default_policy
 streams:
   - input: httpjson
+    vars:
+      - name: host
+        type: text
+        title: Host
+        multi: false
+        required: true
+        show_user: false
+        default: http://host.docker.internal:8000
+        description: The host of the api
+
+      - name: interval
+        type: text
+        title: Fetch Interval
+        multi: false
+        required: true
+        show_user: true
+        default: 1m
+        description: Interval to poll the API. Default is 1 week. Units for this variable are s/m/h.
+
     template_path: httpjson.yml.hbs
     title: Fetch Items from API
     description: Ingests item records from your external API.

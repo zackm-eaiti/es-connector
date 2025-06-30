@@ -13,10 +13,10 @@
     - name: category
       type: keyword
       description: Category of the item.
-      
-- name: debug
-  type: text
-  description: debug
+
+    - name: expires_at
+      type: date 
+      description: Expiration time of item
 
 - name: data_stream.type
   type: constant_keyword
@@ -45,3 +45,4 @@
 - name: input.type
   type: keyword
   description: The type of data we are ingesting
+

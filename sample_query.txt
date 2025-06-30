@@ -1,4 +1,0 @@
-GET logs-connector.items-*/_search
-{
-  "size": 1
-}

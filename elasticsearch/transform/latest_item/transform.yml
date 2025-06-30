@@ -1,0 +1,26 @@
+source:
+  index:
+    - "logs-connector.items-*"
+dest:
+  index: "logs-connector_latest.items-1"
+  aliases:
+    - alias: "logs-connector_latest.items"
+      move_on_creation: true
+latest:
+  unique_key:
+    - item.id
+  sort: "@timestamp"
+description: Latest deduplicated item data from connector integration
+frequency: 30s
+sync:
+  time:
+    field: "@timestamp"
+    delay: 120s
+retention_policy:
+  time:
+    field: item.expires_at
+    max_age: 60s
+_meta:
+  managed: true
+  fleet_transform_version: 0.1.0
+ 
